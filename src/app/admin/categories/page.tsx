@@ -186,7 +186,7 @@ export default function AdminCategoriesPage() {
                   <tr key={c.id} className="text-text-primary hover:bg-bg-secondary/15 transition-colors">
                     <td className="py-3.5 flex items-center gap-3">
                       <div className="relative w-10 h-10 rounded bg-bg-secondary overflow-hidden shrink-0 border border-border/40">
-                        <img src={c.imageUrl} alt="" className="w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" src={c.imageUrl} alt="" className="w-full h-full object-cover" />
                       </div>
                       <div>
                         <p className="font-semibold">{c.name}</p>

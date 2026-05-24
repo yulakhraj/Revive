@@ -61,7 +61,7 @@ export default function CategoryPage() {
 
       {/* Header */}
       <div className="relative rounded-2xl overflow-hidden mb-10 h-48 lg:h-64">
-        <img src={category.imageUrl} alt={category.name} className="w-full h-full object-cover" />
+        <img loading="lazy" decoding="async" src={category.imageUrl} alt={category.name} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
         <div className="absolute bottom-0 left-0 p-8">
           <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-3xl lg:text-4xl font-bold text-white mb-1">

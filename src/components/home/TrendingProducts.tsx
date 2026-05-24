@@ -10,18 +10,29 @@ export default function TrendingProducts() {
   const products = getTrendingProducts();
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
-      <div className="flex items-end justify-between mb-10">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
         <div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex items-center gap-2 text-accent-gold text-xs font-semibold uppercase tracking-widest mb-2">
-            <TrendingUp size={14} /> Hot Right Now
-          </motion.div>
-          <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-heading text-2xl lg:text-3xl font-bold">
-            Trending Products
+          <motion.span
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="sticker mb-4 bg-accent-coral text-white"
+            style={{ borderColor: 'var(--accent-ink)' }}
+          >
+            <TrendingUp size={14} /> HOT RIGHT NOW
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight"
+          >
+            Trending <span className="headline-italic text-gradient-sunset">now</span>
           </motion.h2>
         </div>
-        <Link href="/shop?sort=popular" className="hidden sm:flex items-center gap-1 text-sm text-accent-gold hover:underline font-medium">
-          See All <ArrowRight size={14} />
+        <Link href="/shop?sort=popular" className="link-underline inline-flex items-center gap-1.5 text-sm font-bold w-fit">
+          See all <ArrowRight size={14} />
         </Link>
       </div>
 

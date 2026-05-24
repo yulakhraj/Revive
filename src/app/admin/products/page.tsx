@@ -273,7 +273,7 @@ export default function AdminProductsPage() {
                   <tr key={p.id} className="text-text-primary hover:bg-bg-secondary/15 transition-colors">
                     <td className="py-3.5 flex items-center gap-3">
                       <div className="relative w-10 h-12 rounded bg-bg-secondary overflow-hidden shrink-0 border border-border/40">
-                        <img src={p.images[0]?.url} alt="" className="w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" src={p.images[0]?.url} alt="" className="w-full h-full object-cover" />
                       </div>
                       <div className="min-w-0">
                         <p className="font-semibold truncate max-w-[180px]">{p.name}</p>

@@ -181,7 +181,7 @@ export default function AdminOrdersPage() {
                     <div key={item.id} className="flex gap-3 justify-between items-center text-xs">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-12 bg-bg-secondary rounded overflow-hidden border border-border/40 shrink-0">
-                          <img src={item.productImageSnapshot} alt="" className="w-full h-full object-cover" />
+                          <img loading="lazy" decoding="async" src={item.productImageSnapshot} alt="" className="w-full h-full object-cover" />
                         </div>
                         <div>
                           <p className="font-semibold text-text-primary">{item.productNameSnapshot}</p>

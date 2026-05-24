@@ -41,16 +41,22 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Announcement Bar */}
-      <div className="bg-accent-gold text-[#0C0C0C] text-center py-2 px-4 text-xs font-medium tracking-wide">
-        ✨ FREE SHIPPING on orders above ₹999 | Use code <span className="font-bold">AUSPHOTIC20</span> for 20% off
+      {/* Announcement Bar — marquee */}
+      <div className="bg-accent-coral text-white border-b-[1.5px] border-accent-ink overflow-hidden">
+        <div className="flex animate-marquee-fast whitespace-nowrap py-2 text-[11px] font-black uppercase tracking-widest">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span key={i} className="mx-6 inline-flex items-center gap-2">
+              ✦ FREE SHIPPING ₹999+ <span className="opacity-60">·</span> CODE <span className="underline">AUSPHOTIC20</span> FOR 20% OFF <span className="opacity-60">·</span>
+            </span>
+          ))}
+        </div>
       </div>
 
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 border-b ${
           isScrolled
-            ? 'glass-heavy shadow-lg'
-            : 'bg-bg-primary'
+            ? 'glass-heavy border-accent-ink/10 shadow-md'
+            : 'bg-bg-primary border-transparent'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -66,10 +72,10 @@ export default function Navbar() {
               </button>
 
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">
+                <div className="w-10 h-10 rounded-2xl bg-accent-coral border-[1.5px] border-accent-ink flex items-center justify-center text-white font-heading font-black text-lg shadow-pop-sm group-hover:rotate-[-6deg] transition-transform">
                   A
                 </div>
-                <span className="font-heading text-xl font-bold tracking-tight hidden sm:block">
+                <span className="font-heading text-xl font-black tracking-tight hidden sm:block">
                   {APP_NAME}
                 </span>
               </Link>
@@ -86,12 +92,13 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-bg-secondary ${
-                      'isPremium' in link && link.isPremium ? 'text-accent-gold font-semibold' : 'text-text-primary'
+                    className={`relative flex items-center gap-1 px-4 py-2 text-sm font-bold rounded-full transition-all duration-200 hover:bg-bg-secondary group/link ${
+                      'isPremium' in link && link.isPremium ? 'text-accent-coral' : 'text-text-primary'
                     }`}
                   >
                     {link.label}
                     {'children' in link && link.children && <ChevronDown size={14} className="opacity-50" />}
+                    <span className="absolute left-4 right-4 -bottom-0.5 h-[2px] bg-accent-coral scale-x-0 group-hover/link:scale-x-100 origin-left transition-transform duration-300" />
                   </Link>
 
                   {/* Dropdown */}
@@ -102,13 +109,13 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-1 w-56 glass rounded-xl p-2 shadow-xl"
+                        className="absolute top-full left-0 mt-2 w-56 bg-bg-elevated border-[1.5px] border-accent-ink rounded-2xl p-2 shadow-pop"
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-text-secondary hover:text-text-primary hover:bg-bg-secondary rounded-lg transition-colors"
+                            className="block px-4 py-2.5 text-sm font-medium text-text-secondary hover:text-accent-coral hover:bg-bg-secondary rounded-xl transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -124,7 +131,7 @@ export default function Navbar() {
             <div className="flex items-center gap-1 sm:gap-2">
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className="p-2.5 hover:bg-bg-secondary rounded-lg transition-colors"
+                className="p-2.5 hover:bg-bg-secondary rounded-full transition-colors"
                 aria-label="Search"
               >
                 <Search size={20} />
@@ -132,7 +139,7 @@ export default function Navbar() {
 
               <button
                 onClick={toggleTheme}
-                className="p-2.5 hover:bg-bg-secondary rounded-lg transition-colors hidden sm:flex"
+                className="p-2.5 hover:bg-bg-secondary rounded-full transition-colors hidden sm:flex"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -140,12 +147,12 @@ export default function Navbar() {
 
               <Link
                 href="/wishlist"
-                className="p-2.5 hover:bg-bg-secondary rounded-lg transition-colors relative"
+                className="p-2.5 hover:bg-accent-coral-soft rounded-full transition-colors relative"
                 aria-label="Wishlist"
               >
                 <Heart size={20} />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 gradient-gold rounded-full text-[10px] font-bold flex items-center justify-center text-[#0C0C0C]">
+                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-accent-coral border-[1.5px] border-accent-ink rounded-full text-[10px] font-black flex items-center justify-center text-white">
                     {wishlistCount}
                   </span>
                 )}
@@ -153,12 +160,12 @@ export default function Navbar() {
 
               <Link
                 href="/cart"
-                className="p-2.5 hover:bg-bg-secondary rounded-lg transition-colors relative"
+                className="p-2.5 hover:bg-accent-coral-soft rounded-full transition-colors relative"
                 aria-label="Cart"
               >
                 <ShoppingBag size={20} />
                 {cartCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 gradient-gold rounded-full text-[10px] font-bold flex items-center justify-center text-[#0C0C0C]">
+                  <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-accent-coral border-[1.5px] border-accent-ink rounded-full text-[10px] font-black flex items-center justify-center text-white">
                     {cartCount}
                   </span>
                 )}
@@ -171,13 +178,13 @@ export default function Navbar() {
                   onMouseLeave={() => setProfileOpen(false)}
                 >
                   <button
-                    className="flex items-center gap-2 ml-2 px-3 py-2 hover:bg-bg-secondary rounded-lg transition-colors border border-border/40"
+                    className="flex items-center gap-2 ml-2 px-3 py-2 hover:bg-bg-secondary rounded-full transition-colors border-[1.5px] border-accent-ink"
                     aria-label="User Profile"
                   >
                     <img
                       src={user.avatarUrl || `https://api.dicebear.com/7.x/adventurer/svg?seed=${user.fullName}`}
                       alt={user.fullName}
-                      className="w-6 h-6 rounded-full border border-accent-gold/40"
+                      className="w-6 h-6 rounded-full border-[1.5px] border-accent-coral"
                     />
                     <span className="text-xs font-semibold max-w-[80px] truncate hidden md:inline">
                       {user.fullName.split(' ')[0]}
@@ -192,7 +199,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute right-0 mt-1 w-56 glass-heavy rounded-xl p-2 shadow-xl border border-border text-xs z-50 bg-bg-elevated/95"
+                        className="absolute right-0 mt-2 w-56 bg-bg-elevated rounded-2xl p-2 shadow-pop border-[1.5px] border-accent-ink text-xs z-50"
                       >
                         <div className="px-3 py-2.5 border-b border-border/60">
                           <p className="font-semibold text-text-primary truncate">{user.fullName}</p>
@@ -235,7 +242,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/login"
-                  className="hidden sm:flex items-center gap-2 ml-2 px-4 py-2 gradient-gold text-[#0C0C0C] text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                  className="hidden sm:flex items-center gap-2 ml-2 px-4 py-2 bg-accent-ink text-bg-primary text-sm font-bold rounded-full border-[1.5px] border-accent-ink shadow-pop-sm hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0_var(--accent-coral)] transition-all"
                 >
                   <User size={16} />
                   <span>Login</span>
@@ -264,7 +271,7 @@ export default function Navbar() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     autoFocus
-                    className="w-full pl-11 pr-4 py-3 bg-bg-secondary border border-border rounded-xl text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-gold transition-colors"
+                    className="w-full pl-11 pr-4 py-3 bg-bg-secondary border-[1.5px] border-accent-ink rounded-full text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-bg-elevated focus:shadow-pop-sm transition-all"
                   />
                 </div>
               </div>
@@ -293,8 +300,8 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-                  <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">A</div>
-                  <span className="font-heading text-xl font-bold">{APP_NAME}</span>
+                  <div className="w-10 h-10 rounded-2xl bg-accent-coral border-[1.5px] border-accent-ink flex items-center justify-center text-white font-heading font-black text-lg shadow-pop-sm">A</div>
+                  <span className="font-heading text-xl font-black">{APP_NAME}</span>
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="p-2"><X size={22} /></button>
               </div>
@@ -336,7 +343,7 @@ export default function Navbar() {
                       <img
                         src={user.avatarUrl || `https://api.dicebear.com/7.x/adventurer/svg?seed=${user.fullName}`}
                         alt={user.fullName}
-                        className="w-9 h-9 rounded-full border border-accent-gold/40"
+                        className="w-9 h-9 rounded-full border-[1.5px] border-accent-coral"
                       />
                       <div className="min-w-0">
                         <p className="font-semibold text-sm text-text-primary truncate">{user.fullName}</p>
@@ -373,7 +380,7 @@ export default function Navbar() {
                     </button>
                   </>
                 ) : (
-                  <Link href="/login" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 w-full px-4 py-3 text-sm gradient-gold text-[#0C0C0C] font-semibold rounded-lg">
+                  <Link href="/login" onClick={() => setMobileOpen(false)} className="flex items-center justify-center gap-3 w-full px-4 py-3 text-sm bg-accent-ink text-bg-primary font-bold rounded-full border-[1.5px] border-accent-ink shadow-pop-sm">
                     <User size={18} /> Sign In
                   </Link>
                 )}

@@ -23,7 +23,7 @@ export default function AboutPage() {
 
       {/* Image */}
       <div className="rounded-3xl overflow-hidden mb-16 aspect-[21/9]">
-        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&h=500&fit=crop" alt="Fashion" className="w-full h-full object-cover" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&h=500&fit=crop" alt="Fashion" className="w-full h-full object-cover" />
       </div>
 
       {/* Values */}

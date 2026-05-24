@@ -104,7 +104,7 @@ export default function AdminUsersPage() {
               {filteredUsers.map((u) => (
                 <tr key={u.id} className="text-text-primary hover:bg-bg-secondary/15 transition-colors">
                   <td className="py-3.5 flex items-center gap-3">
-                    <img src={u.avatarUrl} alt="" className="w-8 h-8 rounded-full border border-border shrink-0" />
+                    <img loading="lazy" decoding="async" src={u.avatarUrl} alt="" className="w-8 h-8 rounded-full border border-border shrink-0" />
                     <div>
                       <p className="font-semibold">{u.fullName}</p>
                       <span className="text-[10px] text-text-secondary">{u.phone || 'No phone'}</span>

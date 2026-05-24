@@ -190,7 +190,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </button>
             <div className="h-8 w-px bg-border mx-2" />
             <div className="flex items-center gap-2.5">
-              <img src={user.avatarUrl} alt="" className="w-8 h-8 rounded-full border border-accent-gold/40" />
+              <img loading="lazy" decoding="async" src={user.avatarUrl} alt="" className="w-8 h-8 rounded-full border border-accent-gold/40" />
               <div className="hidden sm:block text-left">
                 <p className="text-xs font-semibold text-text-primary leading-none">{user.fullName}</p>
                 <span className="text-[9px] font-medium text-text-muted">Administrator</span>

@@ -140,7 +140,7 @@ export default function ProfilePage() {
           <div className="glass rounded-2xl p-6 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 gradient-gold rounded-full blur-3xl opacity-10" />
             <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-accent-gold">
-              <img src={user.avatarUrl} alt={user.fullName} className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={user.avatarUrl} alt={user.fullName} className="w-full h-full object-cover" />
             </div>
             <h2 className="font-heading text-lg font-bold text-text-primary flex items-center justify-center gap-1.5">
               {user.fullName}
@@ -531,7 +531,7 @@ export default function ProfilePage() {
                           {order.items.map((item: any) => (
                             <div key={item.id} className="flex gap-4 py-4 first:pt-0 last:pb-0">
                               <div className="relative w-16 h-20 rounded-lg overflow-hidden bg-bg-secondary shrink-0">
-                                <img src={item.productImageSnapshot} alt={item.productNameSnapshot} className="w-full h-full object-cover" />
+                                <img loading="lazy" decoding="async" src={item.productImageSnapshot} alt={item.productNameSnapshot} className="w-full h-full object-cover" />
                               </div>
                               <div className="flex-1 min-w-0">
                                 <h4 className="text-sm font-semibold text-text-primary truncate">{item.productNameSnapshot}</h4>
