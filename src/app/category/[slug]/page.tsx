@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { getCategoryBySlug, getSubCategories } from '@/data/mockCategories';
+import { mockProducts } from '@/data/mockProducts';
 import { mockDb } from '@/lib/supabaseClient';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Product } from '@/types';
 import ProductCard from '@/components/product/ProductCard';
 
@@ -14,7 +15,7 @@ export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
   const category = getCategoryBySlug(slug);
-  const subCategories = getSubCategories(slug);
+  const subCategories = useMemo(() => getSubCategories(slug), [slug]);
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,21 +23,28 @@ export default function CategoryPage() {
     async function loadProducts() {
       try {
         const list = await mockDb.getProducts();
-        // Filter products based on category gender or slug match
-        const filtered = list.filter(p => {
-          if (slug === 'premium') return p.isPremium;
-          if (['men', 'women', 'unisex'].includes(slug)) return p.gender === slug || p.gender === 'unisex';
-          return p.categoryId === slug;
+        const source = list.length > 0 ? list : mockProducts;
+        const childCategoryIds = new Set(subCategories.map(sub => sub.id));
+
+        const filtered = source.filter(p => {
+          if (slug === 'premium') return p.isPremium || p.categoryId === category?.id;
+          if (childCategoryIds.size > 0) return childCategoryIds.has(p.categoryId);
+          return p.categoryId === category?.id || p.categoryId === category?.slug;
         });
         setProducts(filtered);
       } catch (err) {
         console.error('Failed to load category products:', err);
+        setProducts(mockProducts.filter(p => {
+          if (slug === 'premium') return p.isPremium || p.categoryId === category?.id;
+          if (subCategories.length > 0) return subCategories.some(sub => sub.id === p.categoryId);
+          return p.categoryId === category?.id || p.categoryId === category?.slug;
+        }));
       } finally {
         setLoading(false);
       }
     }
     loadProducts();
-  }, [slug]);
+  }, [category?.id, category?.slug, slug, subCategories]);
 
   if (!category) {
     return (
