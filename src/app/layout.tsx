@@ -1,0 +1,60 @@
+import type { Metadata } from "next";
+import { Outfit, Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/features/theme/ThemeProvider";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import QuickViewWrapper from "@/components/product/QuickViewWrapper";
+
+const outfit = Outfit({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Revive — Revive Your Wardrobe | Pre-loved Fashion Marketplace",
+  description:
+    "India's premium second-hand fashion marketplace. Buy pre-loved, verified clothing at up to 70% off retail. Sustainable style, zero compromise.",
+  keywords: [
+    "second hand clothes",
+    "pre-loved fashion",
+    "thrift store India",
+    "sustainable fashion",
+    "vintage clothing",
+    "used clothes online",
+  ],
+  openGraph: {
+    title: "Revive — Revive Your Wardrobe",
+    description: "India's premium second-hand fashion marketplace",
+    type: "website",
+    locale: "en_IN",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${outfit.variable} ${inter.variable} font-body min-h-screen flex flex-col antialiased`}
+      >
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <QuickViewWrapper />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
