@@ -232,7 +232,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.8, reviewCount: 10, viewCount: 920, tags: ['blazer', 'tops', 'pastel', 'pink'],
     images: [
-      { id: 'i18', productId: '18', url: 'https://images.unsplash.com/photo-1548624149-f9b1859aa730?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i18', productId: '18', url: 'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-05-03T10:00:00Z', updatedAt: '2025-05-03T10:00:00Z'
   },
@@ -245,7 +245,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: true, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.6, reviewCount: 15, viewCount: 1100, tags: ['skirt', 'satin', 'midi', 'minimalist'],
     images: [
-      { id: 'i19', productId: '19', url: 'https://images.unsplash.com/photo-1582142407894-ec85a1268a4e?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i19', productId: '19', url: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-05-02T10:00:00Z', updatedAt: '2025-05-02T10:00:00Z'
   },
@@ -323,7 +323,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.6, reviewCount: 12, viewCount: 970, tags: ['knitwear', 'cardigan', 'crop-top', 'matching'],
     images: [
-      { id: 'i25', productId: '25', url: 'https://images.unsplash.com/photo-1518061335872-a369f76d869d?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i25', productId: '25', url: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-04-26T10:00:00Z', updatedAt: '2025-04-26T10:00:00Z'
   },
@@ -453,7 +453,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.3, reviewCount: 14, viewCount: 650, tags: ['coords', 'knitwear', 'shorts', 'crop-top'],
     images: [
-      { id: 'i35', productId: '35', url: 'https://images.unsplash.com/photo-1608248597481-496100c8c836?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i35', productId: '35', url: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-04-16T10:00:00Z', updatedAt: '2025-04-16T10:00:00Z'
   },
@@ -648,7 +648,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.5, reviewCount: 16, viewCount: 880, tags: ['jeans', 'mom-jeans', 'denim', 'zara'],
     images: [
-      { id: 'i50', productId: '50', url: 'https://images.unsplash.com/photo-1568444257176-f4a87c5e50bb?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i50', productId: '50', url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-04-01T10:00:00Z', updatedAt: '2025-04-01T10:00:00Z'
   },
@@ -674,7 +674,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.3, reviewCount: 15, viewCount: 710, tags: ['jeans', 'denim', 'skinny-jeans', 'distressed'],
     images: [
-      { id: 'i52', productId: '52', url: 'https://images.unsplash.com/photo-1592411191262-67b3d23a9b34?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i52', productId: '52', url: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-30T10:00:00Z', updatedAt: '2025-03-30T10:00:00Z'
   },
@@ -726,7 +726,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.2, reviewCount: 11, viewCount: 570, tags: ['jeans', 'denim', 'cropped', 'high-rise'],
     images: [
-      { id: 'i56', productId: '56', url: 'https://images.unsplash.com/photo-1620154276300-c67b14937f60?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i56', productId: '56', url: 'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-26T10:00:00Z', updatedAt: '2025-03-26T10:00:00Z'
   },
@@ -921,7 +921,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.6, reviewCount: 15, viewCount: 280, tags: ['shorts', 'innerwear', 'cotton'],
     images: [
-      { id: 'i71', productId: '71', url: 'https://images.unsplash.com/photo-1605086213894-38817c738bef?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i71', productId: '71', url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-11T10:00:00Z', updatedAt: '2025-03-11T10:00:00Z'
   },
@@ -934,7 +934,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.4, reviewCount: 7, viewCount: 220, tags: ['bralette', 'innerwear', 'mesh'],
     images: [
-      { id: 'i72', productId: '72', url: 'https://images.unsplash.com/photo-1617051957487-1ac9e3f68b69?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i72', productId: '72', url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-10T10:00:00Z', updatedAt: '2025-03-10T10:00:00Z'
   },
@@ -960,7 +960,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.5, reviewCount: 8, viewCount: 190, tags: ['thong', 'innerwear', 'silk', 'lace'],
     images: [
-      { id: 'i74', productId: '74', url: 'https://images.unsplash.com/photo-1620614772707-56c92cdb9d65?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i74', productId: '74', url: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-08T10:00:00Z', updatedAt: '2025-03-08T10:00:00Z'
   },
@@ -1038,7 +1038,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.6, reviewCount: 14, viewCount: 290, tags: ['jeans', 'cargo', 'wide-leg', 'denim'],
     images: [
-      { id: 'i80', productId: '80', url: 'https://images.unsplash.com/photo-1620244726171-cf46d06783c6?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i80', productId: '80', url: 'https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-03-02T10:00:00Z', updatedAt: '2025-03-02T10:00:00Z'
   },
@@ -1064,7 +1064,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.7, reviewCount: 19, viewCount: 280, tags: ['jeans', 'skinny', 'high-rise'],
     images: [
-      { id: 'i82', productId: '82', url: 'https://images.unsplash.com/photo-1612121783121-5f28ed8eff0a?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i82', productId: '82', url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-02-28T10:00:00Z', updatedAt: '2025-02-28T10:00:00Z'
   },
@@ -1077,7 +1077,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.8, reviewCount: 15, viewCount: 330, tags: ['jeans', 'straight-leg', 'vintage', 'levis'],
     images: [
-      { id: 'i83', productId: '83', url: 'https://images.unsplash.com/photo-1593032005966-4d996ae5f1ad?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i83', productId: '83', url: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-02-27T10:00:00Z', updatedAt: '2025-02-27T10:00:00Z'
   },
@@ -1090,7 +1090,7 @@ export const mockProducts: Product[] = [
     isFlashDeal: false, isVerified: true, sellerType: 'admin', sellerId: 'admin1',
     avgRating: 4.5, reviewCount: 8, viewCount: 220, tags: ['jeans', 'black-jeans', 'vintage'],
     images: [
-      { id: 'i84', productId: '84', url: 'https://images.unsplash.com/photo-1612022782955-2c830be75629?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
+      { id: 'i84', productId: '84', url: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=800&fit=crop', sortOrder: 0, isPrimary: true }
     ],
     createdAt: '2025-02-26T10:00:00Z', updatedAt: '2025-02-26T10:00:00Z'
   }
