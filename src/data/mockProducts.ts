@@ -1,6 +1,93 @@
 import type { Product } from '@/types';
 
-export const mockProducts: Product[] = [
+const productImageUrlOverrides: Record<string, string[]> = {
+  '1': ['https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=600&h=800&fit=crop', 'https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=600&h=800&fit=crop'],
+  '2': ['https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop'],
+  '3': ['https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&fit=crop'],
+  '4': ['https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop'],
+  '5': ['https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=800&fit=crop'],
+  '6': ['https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop'],
+  '7': ['https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=600&h=800&fit=crop'],
+  '8': ['https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop'],
+  '9': ['https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop'],
+  '10': ['https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=600&h=800&fit=crop'],
+  '11': ['https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&h=800&fit=crop'],
+  '12': ['https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=800&fit=crop'],
+  '13': ['https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop'],
+  '14': ['https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=800&fit=crop'],
+  '15': ['https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=800&fit=crop'],
+  '16': ['https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&h=800&fit=crop'],
+  '17': ['https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?w=600&h=800&fit=crop'],
+  '18': ['https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop'],
+  '19': ['https://images.unsplash.com/photo-1582142407894-ec85a1268a4e?w=600&h=800&fit=crop'],
+  '20': ['https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=800&fit=crop'],
+  '21': ['https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?w=600&h=800&fit=crop'],
+  '22': ['https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&fit=crop'],
+  '23': ['https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?w=600&h=800&fit=crop'],
+  '24': ['https://images.unsplash.com/photo-1631857455684-a54a2f03665f?w=600&h=800&fit=crop'],
+  '25': ['https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?w=600&h=800&fit=crop'],
+  '26': ['https://images.unsplash.com/photo-1601393710008-984348f7447b?w=600&h=800&fit=crop'],
+  '27': ['https://images.unsplash.com/photo-1617951907145-53f6eb87a3a3?w=600&h=800&fit=crop'],
+  '28': ['https://images.unsplash.com/photo-1597092451116-27787c07901d?w=600&h=800&fit=crop'],
+  '29': ['https://images.unsplash.com/photo-1568663521381-33b7c467fda0?w=600&h=800&fit=crop'],
+  '30': ['https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&h=800&fit=crop'],
+  '31': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '32': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '33': ['https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&h=800&fit=crop'],
+  '34': ['https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop'],
+  '35': ['https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop'],
+  '36': ['https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&h=800&fit=crop'],
+  '37': ['https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&h=800&fit=crop'],
+  '38': ['https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=800&fit=crop'],
+  '39': ['https://images.unsplash.com/photo-1506152983158-b4a74a01c721?w=600&h=800&fit=crop'],
+  '40': ['https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop'],
+  '41': ['https://images.unsplash.com/photo-1515434126000-961d90ff09db?w=600&h=800&fit=crop'],
+  '42': ['https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=800&fit=crop'],
+  '43': ['https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=600&h=800&fit=crop'],
+  '44': ['https://images.unsplash.com/photo-1601393709771-3938c63d41a6?w=600&h=800&fit=crop'],
+  '45': ['https://images.unsplash.com/photo-1546464750-77d1763f6401?w=600&h=800&fit=crop'],
+  '46': ['https://images.unsplash.com/photo-1656587132121-aaccc57589cf?w=600&h=800&fit=crop'],
+  '47': ['https://images.unsplash.com/photo-1660070605791-e5146f71ceb2?w=600&h=800&fit=crop'],
+  '48': ['https://images.unsplash.com/photo-1601393710008-984348f7447b?w=600&h=800&fit=crop'],
+  '49': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '50': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '51': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '52': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '53': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '54': ['https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?w=600&h=800&fit=crop'],
+  '55': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '56': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '57': ['https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&h=800&fit=crop'],
+  '58': ['https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=600&h=800&fit=crop'],
+  '59': ['https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&h=800&fit=crop'],
+  '60': ['https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop'],
+  '61': ['https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&h=800&fit=crop'],
+  '62': ['https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?w=600&h=800&fit=crop'],
+  '63': ['https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=600&h=800&fit=crop'],
+  '64': ['https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop'],
+  '65': ['https://images.unsplash.com/photo-1617951907145-53f6eb87a3a3?w=600&h=800&fit=crop'],
+  '66': ['https://images.unsplash.com/photo-1617951907145-53f6eb87a3a3?w=600&h=800&fit=crop'],
+  '67': ['https://images.unsplash.com/photo-1601393709771-3938c63d41a6?w=600&h=800&fit=crop'],
+  '68': ['https://images.unsplash.com/photo-1656587132121-aaccc57589cf?w=600&h=800&fit=crop'],
+  '69': ['https://images.unsplash.com/photo-1601393710008-984348f7447b?w=600&h=800&fit=crop'],
+  '70': ['https://images.unsplash.com/photo-1574539602047-548bf9557352?w=600&h=800&fit=crop'],
+  '71': ['https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&h=800&fit=crop'],
+  '72': ['https://images.unsplash.com/photo-1568663521381-33b7c467fda0?w=600&h=800&fit=crop'],
+  '73': ['https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&h=800&fit=crop'],
+  '74': ['https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=600&h=800&fit=crop'],
+  '75': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '76': ['https://images.unsplash.com/photo-1714143136372-ddaf8b606da7?w=600&h=800&fit=crop'],
+  '77': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '78': ['https://images.unsplash.com/photo-1714143136372-ddaf8b606da7?w=600&h=800&fit=crop'],
+  '79': ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=800&fit=crop'],
+  '80': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '81': ['https://images.unsplash.com/photo-1637069585336-827b298fe84a?w=600&h=800&fit=crop'],
+  '82': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '83': ['https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=800&fit=crop'],
+  '84': ['https://images.unsplash.com/photo-1637069585336-827b298fe84a?w=600&h=800&fit=crop'],
+};
+
+const baseMockProducts: Product[] = [
   {
     id: '1', name: 'Vintage Oversized Denim Jacket', slug: 'vintage-oversized-denim-jacket',
     description: 'Classic vintage wash oversized denim jacket. Perfect for layering over any outfit. Pre-loved in excellent condition with authentic distressing.',
@@ -1095,6 +1182,22 @@ export const mockProducts: Product[] = [
     createdAt: '2025-02-26T10:00:00Z', updatedAt: '2025-02-26T10:00:00Z'
   }
 ];
+
+export const mockProducts: Product[] = baseMockProducts.map((product) => {
+  const imageUrls = productImageUrlOverrides[product.id];
+
+  if (!imageUrls) {
+    return product;
+  }
+
+  return {
+    ...product,
+    images: product.images.map((image, index) => ({
+      ...image,
+      url: imageUrls[index] || imageUrls[0],
+    })),
+  };
+});
 
 export const getFeaturedProducts = () => mockProducts.filter(p => p.isFeatured);
 export const getFlashDeals = () => mockProducts.filter(p => p.isFlashDeal);
