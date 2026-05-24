@@ -184,7 +184,7 @@ export default function QuickViewModal({ product, isOpen, onClose }: QuickViewMo
                   </span>
                   {product.isVerified && (
                     <span className="flex items-center gap-1 text-[11px] text-success font-medium">
-                      <Shield size={12} /> Verified by Revive
+                      <Shield size={12} /> Verified by Ausphotic
                     </span>
                   )}
                 </div>

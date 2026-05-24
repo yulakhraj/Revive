@@ -88,7 +88,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <Link href="/" className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">R</div>
           <div>
-            <h1 className="font-heading text-md font-bold tracking-tight text-text-primary">Revive</h1>
+            <h1 className="font-heading text-md font-bold tracking-tight text-text-primary">Ausphotic</h1>
             <span className="text-[10px] text-accent-gold uppercase font-bold tracking-widest">Admin Console</span>
           </div>
         </Link>

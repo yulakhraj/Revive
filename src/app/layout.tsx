@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Revive — Revive Your Wardrobe | Pre-loved Fashion Marketplace",
+  title: "Ausphotic — Light Up Your Wardrobe | Pre-loved Fashion Marketplace",
   description:
     "India's premium second-hand fashion marketplace. Buy pre-loved, verified clothing at up to 70% off retail. Sustainable style, zero compromise.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "used clothes online",
   ],
   openGraph: {
-    title: "Revive — Revive Your Wardrobe",
+    title: "Ausphotic — Light Up Your Wardrobe",
     description: "India's premium second-hand fashion marketplace",
     type: "website",
     locale: "en_IN",

@@ -55,7 +55,7 @@ export default function LoginPage() {
           <Link href="/" className="inline-flex items-center gap-2 mb-4">
             <div className="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-2xl">R</div>
           </Link>
-          <h1 className="font-heading text-2xl font-bold">{isLogin ? 'Welcome Back' : 'Join Revive'}</h1>
+          <h1 className="font-heading text-2xl font-bold">{isLogin ? 'Welcome Back' : 'Join Ausphotic'}</h1>
           <p className="text-text-secondary text-sm mt-1">{isLogin ? 'Sign in to your account' : 'Create your free account'}</p>
         </div>
 

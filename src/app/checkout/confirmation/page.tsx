@@ -45,7 +45,7 @@ function ConfirmationContent() {
   // Delivery track states
   const trackingSteps = [
     { label: 'Ordered', desc: 'Order placed & confirmed', isDone: true },
-    { label: 'Packed', desc: 'Verified & packed by Revive', isDone: order.status !== 'pending' },
+    { label: 'Packed', desc: 'Verified & packed by Ausphotic', isDone: order.status !== 'pending' },
     { label: 'Shipped', desc: 'In transit to delivery hub', isDone: ['shipped', 'delivered'].includes(order.status) },
     { label: 'Delivered', desc: 'Handed to recipient', isDone: order.status === 'delivered' },
   ];

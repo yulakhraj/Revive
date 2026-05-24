@@ -18,7 +18,7 @@ export default function ContactPage() {
         {/* Contact Info */}
         <div className="space-y-6">
           {[
-            { icon: Mail, label: 'Email', value: 'hello@revive.in', href: 'mailto:hello@revive.in' },
+            { icon: Mail, label: 'Email', value: 'hello@ausphotic.in', href: 'mailto:hello@ausphotic.in' },
             { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
             { icon: MapPin, label: 'Office', value: 'Mumbai, Maharashtra, India', href: '#' },
             { icon: Clock, label: 'Hours', value: 'Mon-Sat, 10AM - 7PM IST', href: '#' },

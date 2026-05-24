@@ -1,5 +1,5 @@
-export const APP_NAME = 'Revive';
-export const APP_TAGLINE = 'Revive your wardrobe';
+export const APP_NAME = 'Ausphotic';
+export const APP_TAGLINE = 'Light up your wardrobe';
 export const APP_DESCRIPTION = 'India\'s premium second-hand fashion marketplace. Buy pre-loved, verified clothing at unbeatable prices. Sustainable style, zero compromise.';
 
 export const CURRENCY = '₹';
@@ -119,7 +119,7 @@ export const FOOTER_LINKS = {
 };
 
 export const SOCIAL_LINKS = [
-  { href: 'https://instagram.com/revive', label: 'Instagram', icon: 'instagram' },
-  { href: 'https://twitter.com/revive', label: 'Twitter', icon: 'twitter' },
-  { href: 'https://pinterest.com/revive', label: 'Pinterest', icon: 'pin' },
+  { href: 'https://instagram.com/ausphotic', label: 'Instagram', icon: 'instagram' },
+  { href: 'https://twitter.com/ausphotic', label: 'Twitter', icon: 'twitter' },
+  { href: 'https://pinterest.com/ausphotic', label: 'Pinterest', icon: 'pin' },
 ];

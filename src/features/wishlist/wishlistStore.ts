@@ -37,6 +37,6 @@ export const useWishlistStore = create<WishlistStore>()(
       isWishlisted: (productId) => get().items.includes(productId),
       getCount: () => get().items.length,
     }),
-    { name: 'revive-wishlist' }
+    { name: 'ausphotic-wishlist' }
   )
 );

@@ -28,7 +28,7 @@ export default function SustainableBanner() {
               <span className="text-gradient-gold">Saves the Planet</span>
             </motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-white/50 text-sm leading-relaxed max-w-md">
-              By choosing pre-loved fashion, you&apos;re reducing textile waste, saving water, and lowering carbon emissions. Join the circular fashion movement with Revive.
+              By choosing pre-loved fashion, you&apos;re reducing textile waste, saving water, and lowering carbon emissions. Join the circular fashion movement with Ausphotic.
             </motion.p>
           </div>
 

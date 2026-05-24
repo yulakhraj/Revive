@@ -120,7 +120,7 @@ export const mockAuth = {
     
     // Migration: Update old default admin email to 'admin'
     let hasMigration = false;
-    const adminIdx = users.findIndex(u => u.email === 'admin@revive.com' || u.id === 'admin-id');
+    const adminIdx = users.findIndex(u => u.email === 'admin@ausphotic.com' || u.id === 'admin-id');
     if (adminIdx !== -1 && users[adminIdx].email !== 'admin') {
       users[adminIdx].email = 'admin';
       hasMigration = true;
@@ -140,7 +140,7 @@ export const mockAuth = {
         };
         const defaultUser = {
           id: 'user-id',
-          email: 'user@revive.com',
+          email: 'user@ausphotic.com',
           fullName: 'Jane Doe',
           avatarUrl: 'https://api.dicebear.com/7.x/adventurer/svg?seed=jane',
           phone: '+91 98765 43210',
@@ -155,7 +155,7 @@ export const mockAuth = {
 
     const user = users.find(u => u.email === email);
     if (!user) {
-      throw new Error('User not found. Use admin/admin or user@revive.com.');
+      throw new Error('User not found. Use admin/admin or user@ausphotic.com.');
     }
 
     if (email === 'admin' && password !== 'admin') {

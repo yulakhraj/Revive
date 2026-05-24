@@ -30,7 +30,7 @@ export default function AdminUsersPage() {
           },
           {
             id: 'user-id',
-            email: 'user@revive.com',
+            email: 'user@ausphotic.com',
             fullName: 'Jane Doe',
             avatarUrl: 'https://api.dicebear.com/7.x/adventurer/svg?seed=jane',
             phone: '+91 98765 43210',

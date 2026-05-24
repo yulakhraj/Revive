@@ -1,6 +1,6 @@
-# Revive — India's Premium Second-Hand Fashion Marketplace
+# Ausphotic — India's Premium Second-Hand Fashion Marketplace
 
-Revive is a highly polished, premium marketplace for pre-loved fashion. It allows users to browse, buy, and track authenticated, verified clothing at unbeatable prices. The application is built using a modern Next.js framework, featuring a glassmorphic dark-themed design system, smooth animations, and robust client-side storage fallback capabilities.
+Ausphotic is a highly polished, premium marketplace for pre-loved fashion. It allows users to browse, buy, and track authenticated, verified clothing at unbeatable prices. The application is built using a modern Next.js framework, featuring a glassmorphic dark-themed design system, smooth animations, and robust client-side storage fallback capabilities.
 
 ---
 

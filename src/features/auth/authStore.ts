@@ -165,7 +165,7 @@ export const useAuthStore = create<AuthState>()(
       },
     }),
     {
-      name: 'revive-auth',
+      name: 'ausphotic-auth',
       partialize: (state) => ({ user: state.user, addresses: state.addresses }),
     }
   )

@@ -153,7 +153,7 @@ export default function ProductDetailPage() {
             </span>
             {product.isVerified && (
               <span className="flex items-center gap-1 text-xs text-success font-medium">
-                <Shield size={12} /> Verified by Revive
+                <Shield size={12} /> Verified by Ausphotic
               </span>
             )}
           </div>

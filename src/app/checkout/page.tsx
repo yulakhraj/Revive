@@ -551,7 +551,7 @@ export default function CheckoutPage() {
               <div className="bg-success/5 border border-success/15 rounded-xl p-3.5 flex gap-2.5 items-start">
                 <ShieldCheck size={16} className="text-success shrink-0 mt-0.5" />
                 <div className="text-[10px] text-success font-medium">
-                  <p className="font-semibold text-[11px] mb-0.5">Revive Buyer Protection</p>
+                  <p className="font-semibold text-[11px] mb-0.5">Ausphotic Buyer Protection</p>
                   Assured authentic, quality verified items with easy 7-day return.
                 </div>
               </div>

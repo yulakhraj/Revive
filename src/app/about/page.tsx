@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ArrowRight, Heart, Shield, Recycle, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About — Revive | Our Story',
-  description: 'Learn about Revive, India\'s premium second-hand fashion marketplace. Our mission to make sustainable fashion accessible to all.',
+  title: 'About — Ausphotic | Our Story',
+  description: 'Learn about Ausphotic, India\'s premium second-hand fashion marketplace. Our mission to make sustainable fashion accessible to all.',
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
           Fashion Should Be<br /><span className="text-gradient-gold">Circular, Not Linear</span>
         </h1>
         <p className="text-text-secondary text-base max-w-2xl mx-auto leading-relaxed">
-          Revive was born from a simple idea: great fashion shouldn&apos;t end up in landfills. We&apos;re building India&apos;s most trusted marketplace for pre-loved fashion — where every purchase saves the planet.
+          Ausphotic was born from a simple idea: great fashion shouldn&apos;t end up in landfills. We&apos;re building India&apos;s most trusted marketplace for pre-loved fashion — where every purchase saves the planet.
         </p>
       </div>
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <div className="text-center p-10 bg-bg-secondary border border-border rounded-3xl">
-        <h2 className="font-heading text-2xl font-bold mb-3">Ready to Revive Your Wardrobe?</h2>
+        <h2 className="font-heading text-2xl font-bold mb-3">Ready to Light Up Your Wardrobe?</h2>
         <p className="text-text-secondary text-sm mb-6">Discover pre-loved fashion at unbeatable prices.</p>
         <Link href="/shop" className="inline-flex items-center gap-2 px-8 py-4 gradient-gold text-[#0C0C0C] font-semibold rounded-xl hover:opacity-90 transition-opacity">
           Shop Now <ArrowRight size={16} />

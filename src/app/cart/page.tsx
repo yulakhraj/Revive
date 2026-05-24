@@ -105,14 +105,14 @@ export default function CartPage() {
                   />
                 </div>
                 <button
-                  onClick={() => { if (coupon === 'REVIVE20') setCouponApplied(true); }}
+                  onClick={() => { if (coupon === 'AUSPHOTIC20') setCouponApplied(true); }}
                   className="px-4 py-2.5 border border-accent-gold text-accent-gold text-sm font-semibold rounded-xl hover:bg-accent-gold hover:text-[#0C0C0C] transition-all"
                 >
                   Apply
                 </button>
               </div>
-              {couponApplied && <p className="text-xs text-success mt-2">🎉 REVIVE20 applied — 20% off!</p>}
-              <p className="text-[10px] text-text-muted mt-1">Try: REVIVE20</p>
+              {couponApplied && <p className="text-xs text-success mt-2">🎉 AUSPHOTIC20 applied — 20% off!</p>}
+              <p className="text-[10px] text-text-muted mt-1">Try: AUSPHOTIC20</p>
             </div>
 
             <div className="space-y-3 text-sm">

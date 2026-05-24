@@ -17,7 +17,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('revive-theme') as Theme;
+    const stored = localStorage.getItem('ausphotic-theme') as Theme;
     const initialTheme = stored || 'dark';
     
     // Defer state updates to avoid synchronous cascading renders
@@ -32,7 +32,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (mounted) {
       document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('revive-theme', theme);
+      localStorage.setItem('ausphotic-theme', theme);
     }
   }, [theme, mounted]);
 

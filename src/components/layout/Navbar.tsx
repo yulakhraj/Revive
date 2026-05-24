@@ -43,7 +43,7 @@ export default function Navbar() {
     <>
       {/* Announcement Bar */}
       <div className="bg-accent-gold text-[#0C0C0C] text-center py-2 px-4 text-xs font-medium tracking-wide">
-        ✨ FREE SHIPPING on orders above ₹999 | Use code <span className="font-bold">REVIVE20</span> for 20% off
+        ✨ FREE SHIPPING on orders above ₹999 | Use code <span className="font-bold">AUSPHOTIC20</span> for 20% off
       </div>
 
       <header

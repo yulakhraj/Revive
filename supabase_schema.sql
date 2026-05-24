@@ -1,5 +1,5 @@
 -- ==========================================
--- REVIVE — DATABASE SCHEMA FOR SUPABASE
+-- AUSPHOTIC — DATABASE SCHEMA FOR SUPABASE
 -- Paste this script into your Supabase SQL Editor
 -- ==========================================
 

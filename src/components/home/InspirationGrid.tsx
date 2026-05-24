@@ -16,7 +16,7 @@ export default function InspirationGrid() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
       <div className="text-center mb-10">
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-accent-gold text-xs font-semibold uppercase tracking-widest mb-2">
-          @revive.style
+          @ausphotic.style
         </motion.p>
         <motion.h2 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-heading text-2xl lg:text-3xl font-bold mb-2">
           Style Inspiration

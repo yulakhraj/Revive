@@ -55,7 +55,7 @@ export default function Footer() {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-bg-primary border border-border rounded-lg flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-colors text-sm">
                 𝕏
               </a>
-              <a href="mailto:hello@revive.in" className="w-9 h-9 bg-bg-primary border border-border rounded-lg flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-colors">
+              <a href="mailto:hello@ausphotic.in" className="w-9 h-9 bg-bg-primary border border-border rounded-lg flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-colors">
                 <Mail size={16} />
               </a>
             </div>
@@ -96,7 +96,7 @@ export default function Footer() {
                 <Phone size={14} className="mt-0.5 shrink-0" /> +91 98765 43210
               </li>
               <li className="flex items-start gap-2 text-sm text-text-secondary">
-                <Mail size={14} className="mt-0.5 shrink-0" /> hello@revive.in
+                <Mail size={14} className="mt-0.5 shrink-0" /> hello@ausphotic.in
               </li>
             </ul>
           </div>

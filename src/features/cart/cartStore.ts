@@ -67,6 +67,6 @@ export const useCartStore = create<CartStore>()(
       getSubtotal: () =>
         get().items.reduce((sum, item) => sum + item.product.price * item.quantity, 0),
     }),
-    { name: 'revive-cart' }
+    { name: 'ausphotic-cart' }
   )
 );

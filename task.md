@@ -1,4 +1,4 @@
-# Revive — Build Tracker
+# Ausphotic — Build Tracker
 
 ## Phase A: Project Setup & Design System
 - [x] Initialize Next.js project
