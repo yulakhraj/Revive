@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/features/theme/ThemeProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import QuickViewWrapper from "@/components/product/QuickViewWrapper";
@@ -53,6 +54,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <QuickViewWrapper />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

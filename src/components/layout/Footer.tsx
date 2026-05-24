@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold">R</div>
+              <div className="w-8 h-8 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold">A</div>
               <span className="font-heading text-lg font-bold">{APP_NAME}</span>
             </Link>
             <p className="text-text-secondary text-sm mb-4 leading-relaxed">{APP_TAGLINE}. India&apos;s premium marketplace for pre-loved fashion.</p>

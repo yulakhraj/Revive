@@ -67,7 +67,7 @@ export default function Navbar() {
 
               <Link href="/" className="flex items-center gap-2 group">
                 <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">
-                  R
+                  A
                 </div>
                 <span className="font-heading text-xl font-bold tracking-tight hidden sm:block">
                   {APP_NAME}
@@ -293,7 +293,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-                  <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">R</div>
+                  <div className="w-9 h-9 rounded-lg gradient-gold flex items-center justify-center text-[#0C0C0C] font-heading font-bold text-lg">A</div>
                   <span className="font-heading text-xl font-bold">{APP_NAME}</span>
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="p-2"><X size={22} /></button>
